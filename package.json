@@ -1,0 +1,28 @@
+{
+  "name": "zola-landing",
+  "version": "1.0.0",
+  "description": "Zola landing page",
+  "main": "index.js",
+  "dependencies": {
+    "next": "^6.0.3",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "styled-components": "^3.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZolaApp/zola-landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZolaApp/zola-landing/issues"
+  },
+  "homepage": "https://github.com/ZolaApp/zola-landing#readme"
+}

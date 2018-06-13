@@ -4,6 +4,8 @@
   "description": "Zola landing page",
   "main": "index.js",
   "dependencies": {
+    "@zeit/next-css": "^0.2.0",
+    "babel-plugin-styled-components": "^1.5.1",
     "next": "^6.0.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",

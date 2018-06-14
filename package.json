@@ -15,7 +15,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "next",
+    "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 next",
     "build": "next build",
     "start": "next start"
   },

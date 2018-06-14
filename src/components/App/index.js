@@ -50,15 +50,15 @@ class App extends Component<Props, State> {
             locale={this.state.locale}
             messages={this.state.translations}
           >
-            {/* <LanguageContext.Provider
+            <LanguageContext.Provider
               value={{
                 enabledLocales: this.props.enabledLocales,
                 locale: this.state.locale,
                 switchLanguage: this.switchLanguage
               }}
-            > */}
-            <Router />
-            {/* </LanguageContext.Provider> */}
+            >
+              <Router />
+            </LanguageContext.Provider>
           </IntlProvider>
         </ThemeProvider>
       </Container>

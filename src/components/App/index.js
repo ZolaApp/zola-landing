@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react'
 import { ThemeProvider } from 'styled-components'
+import { BrowserRouter } from 'react-router-dom'
 import { IntlProvider } from 'react-intl'
 import { LanguageContext } from '../../state'
 import theme from '../../theme'
@@ -46,20 +47,26 @@ class App extends Component<Props, State> {
     return (
       <Container>
         <ThemeProvider theme={theme}>
-          <IntlProvider
-            locale={this.state.locale}
-            messages={this.state.translations}
+          <LanguageContext.Provider
+            value={{
+              enabledLocales: this.props.enabledLocales,
+              locale: this.state.locale,
+              switchLanguage: this.switchLanguage
+            }}
           >
-            <LanguageContext.Provider
-              value={{
-                enabledLocales: this.props.enabledLocales,
-                locale: this.state.locale,
-                switchLanguage: this.switchLanguage
-              }}
-            >
-              <Router />
-            </LanguageContext.Provider>
-          </IntlProvider>
+            <BrowserRouter>
+              <Router>
+                {Routes => (
+                  <IntlProvider
+                    locale={this.state.locale}
+                    messages={this.state.translations}
+                  >
+                    {Routes}
+                  </IntlProvider>
+                )}
+              </Router>
+            </BrowserRouter>
+          </LanguageContext.Provider>
         </ThemeProvider>
       </Container>
     )

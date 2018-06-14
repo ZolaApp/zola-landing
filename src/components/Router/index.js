@@ -1,11 +1,12 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import Home from '../Home'
 
-const Router = () => (
-  <BrowserRouter>
-    <Route path="/:locale" component={Home} />
-  </BrowserRouter>
-)
+const Router = props =>
+  props.children(<Route path="/:locale?" component={Home} />)
+
+// < BrowserRouter >
+// <Route path="/:locale" component={Home} />
+// </BrowserRouter >
 
 export default Router

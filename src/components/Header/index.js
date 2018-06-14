@@ -1,8 +1,8 @@
 import React from 'react'
-import Navigation from '../Navigation'
 import Container from '../Container'
 import Wrapper from '../Wrapper'
 import Text from '../Text'
+import Navigation from '../Navigation'
 import { StyledHeader } from './styles'
 
 const Header = () => (

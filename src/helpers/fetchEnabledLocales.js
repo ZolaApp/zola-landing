@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-unfetch'
+import fetch from 'unfetch'
 import { ZOLA_API_BASE } from '../constants/translations'
 
 const fetchEnabledLocales = async () => {

@@ -1,32 +1,36 @@
 {
   "name": "zola-landing",
-  "version": "1.0.0",
-  "description": "Zola landing page",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@zeit/next-css": "^0.2.0",
-    "babel-plugin-styled-components": "^1.5.1",
-    "isomorphic-unfetch": "^2.0.0",
-    "next": "^6.0.3",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-intl": "^2.4.0",
-    "styled-components": "^3.3.2"
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "styled-components": "^3.3.2",
+    "unfetch": "^3.0.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 next",
-    "build": "next build",
-    "start": "next start"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ZolaApp/zola-landing.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ZolaApp/zola-landing/issues"
-  },
-  "homepage": "https://github.com/ZolaApp/zola-landing#readme"
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-config-standard": "11.0.0",
+    "eslint-config-standard-react": "6.0.0",
+    "eslint-plugin-flowtype": "2.49.3",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-node": "6.0.1",
+    "eslint-plugin-promise": "3.8.0",
+    "eslint-plugin-react": "^7.9.1",
+    "eslint-plugin-standard": "3.1.0",
+    "flow-bin": "^0.74.0"
+  }
 }

@@ -1,15 +1,20 @@
 import React from 'react'
-import Text from '../Text'
+import Navigation from '../Navigation'
+import Container from '../Container'
 import Wrapper from '../Wrapper'
+import Text from '../Text'
 import { StyledHeader } from './styles'
 
 const Header = () => {
   return (
-    <StyledHeader>
+    <Container>
       <Wrapper padding="large">
-        <Text>Header</Text>
+        <StyledHeader>
+          <Text>LOGO</Text>
+          <Navigation />
+        </StyledHeader>
       </Wrapper>
-    </StyledHeader>
+    </Container>
   )
 }
 

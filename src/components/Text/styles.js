@@ -5,4 +5,6 @@ export const StyledText = styled.span`
     size ? theme.fonts.sizes[size] : theme.fonts.sizes.regular};
   color: ${({ color, theme }) =>
     color ? theme.colors[color] : theme.colors.dark};
+  ${({ bold }) => bold && `font-weight: bold`};
+  ${({ semiBold }) => semiBold && `font-weight: 600`};
 `

@@ -2,6 +2,7 @@ import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import Wrapper from '../Wrapper'
 import Text from '../Text'
+import HeroSchema from '../HeroSchema'
 import { CenterWrapper, Catchline } from './styles'
 
 const Hero = () => {
@@ -18,6 +19,7 @@ const Hero = () => {
             </Text>
           </Catchline>
         </Wrapper>
+        <HeroSchema />
       </CenterWrapper>
     </Wrapper>
   )

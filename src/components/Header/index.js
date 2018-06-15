@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from '../Container'
 import Wrapper from '../Wrapper'
-import Text from '../Text'
+import LogoWithText from '../LogoWithText'
 import Navigation from '../Navigation'
 import { StyledHeader } from './styles'
 
@@ -9,7 +9,7 @@ const Header = () => (
   <Container>
     <Wrapper padding="large">
       <StyledHeader>
-        <Text>LOGO</Text>
+        <LogoWithText />
         <Navigation />
       </StyledHeader>
     </Wrapper>

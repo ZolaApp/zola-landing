@@ -2,6 +2,7 @@ export default {
   colors: {
     light: 'rgb(255, 255, 255)',
     dark: 'rgb(25, 25, 25)',
+    semiDark: 'rgba(25, 25, 25, 0.5)',
     lightGray: 'rgba(25, 25, 25, 0.2)'
   },
   globals: {
@@ -26,11 +27,6 @@ export default {
     regular: '1rem',
     large: '1.875rem',
     xlarge: '3.75rem',
-    huge: '5.625rem',
-    enormous: '7.5rem',
-    wrappers: {
-      small: '430px',
-      regular: '1110px'
-    }
+    huge: '5.625rem'
   }
 }

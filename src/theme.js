@@ -1,15 +1,16 @@
 export default {
   colors: {
     light: 'rgb(255, 255, 255)',
-    dark: 'rgb(25, 25, 25)'
+    dark: 'rgb(25, 25, 25)',
+    lightGray: 'rgba(25, 25, 25, 0.2)'
   },
   globals: {
-    transition: 'all ease 0.25s'
+    transition: 'all ease 0.25s',
+    radius: '5px'
   },
   fonts: {
     families: {
-      sourceSans: "'Source Sans Pro', sans-serif",
-      sourceCode: "'Source Code Pro', monospace"
+      sourceSans: "'Source Sans Pro', sans-serif"
     },
     sizes: {
       small: '0.875em',

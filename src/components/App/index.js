@@ -45,30 +45,28 @@ class App extends Component<Props, State> {
 
   render() {
     return (
-      <Container>
-        <ThemeProvider theme={theme}>
-          <LanguageContext.Provider
-            value={{
-              enabledLocales: this.props.enabledLocales,
-              locale: this.state.locale,
-              switchLanguage: this.switchLanguage
-            }}
-          >
-            <BrowserRouter>
-              <Router>
-                {Routes => (
-                  <IntlProvider
-                    locale={this.state.locale}
-                    messages={this.state.translations}
-                  >
-                    {Routes}
-                  </IntlProvider>
-                )}
-              </Router>
-            </BrowserRouter>
-          </LanguageContext.Provider>
-        </ThemeProvider>
-      </Container>
+      <ThemeProvider theme={theme}>
+        <LanguageContext.Provider
+          value={{
+            enabledLocales: this.props.enabledLocales,
+            locale: this.state.locale,
+            switchLanguage: this.switchLanguage
+          }}
+        >
+          <BrowserRouter>
+            <Router>
+              {Routes => (
+                <IntlProvider
+                  locale={this.state.locale}
+                  messages={this.state.translations}
+                >
+                  {Routes}
+                </IntlProvider>
+              )}
+            </Router>
+          </BrowserRouter>
+        </LanguageContext.Provider>
+      </ThemeProvider>
     )
   }
 }

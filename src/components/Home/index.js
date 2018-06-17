@@ -6,6 +6,7 @@ import { LanguageContext } from '../../state'
 import isEnabledLocale from '../../helpers/isEnabledLocale'
 import Header from '../Header'
 import Hero from '../Hero'
+import GettingStarted from '../GettingStarted'
 
 type Props = {
   switchLanguage: any,
@@ -56,6 +57,7 @@ class Home extends React.Component<Props> {
       <div>
         <Header />
         <Hero />
+        <GettingStarted />
       </div>
     )
   }

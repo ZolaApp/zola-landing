@@ -3,7 +3,8 @@ export default {
     light: 'rgb(255, 255, 255)',
     dark: 'rgb(25, 25, 25)',
     semiDark: 'rgba(25, 25, 25, 0.5)',
-    lightGray: 'rgba(25, 25, 25, 0.2)'
+    lightGray: 'rgba(25, 25, 25, 0.2)',
+    alphaLight: 'rgba(234, 234, 234, 0.2)'
   },
   globals: {
     transition: 'all ease 0.25s',

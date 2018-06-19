@@ -8,6 +8,7 @@ import Header from '../Header'
 import Hero from '../Hero'
 import GettingStarted from '../GettingStarted'
 import BusinessValues from '../BusinessValues'
+import DeveloperSection from '../DeveloperSection'
 
 type Props = {
   switchLanguage: any,
@@ -60,6 +61,7 @@ class Home extends React.Component<Props> {
         <Hero />
         <GettingStarted />
         <BusinessValues />
+        <DeveloperSection />
       </div>
     )
   }

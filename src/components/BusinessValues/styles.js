@@ -1,4 +1,11 @@
 import styled from 'styled-components'
+import { media } from '../../theme'
+
+export const BlocksWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  ${media.tablet`flex-direction: row;`};
+`
 
 export const Block = styled.div`
   padding: ${({ theme }) => theme.sizes.large};

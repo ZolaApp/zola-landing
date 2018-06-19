@@ -125,6 +125,12 @@ table {
   border-spacing: 0;
 }
 
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
 body {
   white-space: pre-wrap;
   font-family: 'Source Sans Pro', sans-serif;

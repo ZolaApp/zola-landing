@@ -1,13 +1,18 @@
 import styled from 'styled-components'
+import { media } from '../../theme'
 import { StyledText } from '../Text/styles'
 
 export const Schema = styled.div`
   display: flex;
+  flex-direction: column;
+  ${media.large`flex-direction: row;`};
   align-items: flex-start;
 `
 
 export const SchemaFigure = styled.div`
   display: flex;
+  flex-direction: column;
+  ${media.large`flex-direction: row;`};
   align-items: center;
 `
 
@@ -18,8 +23,14 @@ export const FigureWrapper = styled.div`
 `
 
 export const FigureArrow = styled.div`
-  margin: 0 ${({ theme }) => theme.sizes.large};
-  margin-top: -55px;
+  margin: ${({ theme }) => theme.sizes.large} 0;
+  transform: rotate(90deg);
+
+  ${media.large`
+    transform: rotate(0deg);
+    margin: 0 ${({ theme }) => theme.sizes.large};
+    margin-top: -55px;
+  `};
 `
 
 export const FigureIllu = styled.div`

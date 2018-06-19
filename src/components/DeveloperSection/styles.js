@@ -3,6 +3,7 @@ import { media } from '../../theme'
 import { StyledText } from '../Text/styles'
 
 export const DarkWrapper = styled.div`
+  position: relative;
   background: ${({ theme }) => theme.colors.dark};
 `
 
@@ -40,6 +41,23 @@ export const FourthSection = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
+`
+
+export const FifthSection = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: -70px;
+  left: 0;
+  padding: ${({ theme }) => theme.sizes.large};
+  text-align: center;
+  background: ${({ theme }) => theme.colors.dark2};
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  ${media.desktop`
+    width: 640px;
+    left: calc(50% - 320px);
+  `};
 `
 
 export const Section = styled.div`
@@ -100,14 +118,22 @@ export const IlluWrapper = styled.div`
 
 export const Services = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  ${media.tablet`flex-direction: row;`};
   justify-content: center;
 
   > svg {
     opacity: 0.15;
-    margin-right: 2.813em;
+    margin-bottom: ${({ theme }) => theme.sizes.large};
+    ${media.tablet`
+      margin-right: 2.813em;
+      margin-bottom: 0;
+    `};
 
     &:last-child {
       margin-right: 0;
+      margin-bottom: 0;
     }
   }
 `

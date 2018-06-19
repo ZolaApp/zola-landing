@@ -16,6 +16,7 @@ import {
   MainSection,
   SecondarySections,
   FourthSection,
+  FifthSection,
   SubSections,
   Section,
   MainSectionTextsWrapper,
@@ -29,7 +30,7 @@ import {
 const DeveloperSection = () => {
   return (
     <DarkWrapper>
-      <Wrapper pTop="huge" pBottom="huge">
+      <Wrapper pTop="huge" pBottom="enormous">
         <Container>
           <TitleWrapper>
             <Text size="xlarge" color="light">
@@ -99,14 +100,16 @@ const DeveloperSection = () => {
         </SecondarySections>
         <FourthSection>
           <Wrapper pTop="xlarge" pBottom="large">
-            <TextsWrapper>
-              <Text color="light" size="large">
-                <FormattedMessage id="devSection.section4.title" />
-              </Text>
-              <Text color="semiLight" size="small">
-                <FormattedMessage id="devSection.section4.subtitle" />
-              </Text>
-            </TextsWrapper>
+            <Wrapper pLeft="large" pRight="large">
+              <TextsWrapper>
+                <Text color="light" size="large">
+                  <FormattedMessage id="devSection.section4.title" />
+                </Text>
+                <Text color="semiLight" size="small">
+                  <FormattedMessage id="devSection.section4.subtitle" />
+                </Text>
+              </TextsWrapper>
+            </Wrapper>
             <Wrapper mTop="large">
               <Services>
                 <Github />
@@ -117,6 +120,16 @@ const DeveloperSection = () => {
             </Wrapper>
           </Wrapper>
         </FourthSection>
+        <FifthSection>
+          <TextsWrapper>
+            <Text color="light" size="large">
+              <FormattedMessage id="devSection.section5.title" />
+            </Text>
+            <Text color="semiLight" size="small">
+              <FormattedMessage id="devSection.section5.subtitle" />
+            </Text>
+          </TextsWrapper>
+        </FifthSection>
       </Wrapper>
     </DarkWrapper>
   )

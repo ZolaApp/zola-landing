@@ -50,6 +50,7 @@ export default {
     regular: '1rem',
     large: '1.875rem',
     xlarge: '3.75rem',
-    huge: '5.625rem'
+    huge: '5.625rem',
+    enormous: '7.5em'
   }
 }

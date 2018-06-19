@@ -36,6 +36,12 @@ export const SecondarySections = styled.div`
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
 `
 
+export const FourthSection = styled.div`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`
+
 export const Section = styled.div`
   overflow: hidden;
   position: relative;
@@ -90,6 +96,20 @@ export const MainSectionTextsWrapper = styled.div`
 export const IlluWrapper = styled.div`
   display: none;
   ${media.desktop`display: block;`};
+`
+
+export const Services = styled.div`
+  display: flex;
+  justify-content: center;
+
+  > svg {
+    opacity: 0.15;
+    margin-right: 2.813em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 `
 
 export const TextsWrapper = styled.div`

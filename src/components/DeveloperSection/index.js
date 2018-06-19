@@ -6,14 +6,20 @@ import Text from '../Text'
 import Terminal from '../Illu/Terminal'
 import CDN from '../Illu/CDN'
 import VersioningGraph from '../Illu/VersioningGraph'
+import Github from '../ServicesLogos/Github'
+import Slack from '../ServicesLogos/Slack'
+import Jenkins from '../ServicesLogos/Jenkins'
+import CircleCI from '../ServicesLogos/CircleCI'
 import {
   DarkWrapper,
   TitleWrapper,
   MainSection,
   SecondarySections,
+  FourthSection,
   SubSections,
   Section,
   MainSectionTextsWrapper,
+  Services,
   TextsWrapper,
   IlluWrapper,
   CdnIlluWrapper,
@@ -91,6 +97,26 @@ const DeveloperSection = () => {
             </SubSections>
           </Container>
         </SecondarySections>
+        <FourthSection>
+          <Wrapper pTop="xlarge" pBottom="large">
+            <TextsWrapper>
+              <Text color="light" size="large">
+                <FormattedMessage id="devSection.section4.title" />
+              </Text>
+              <Text color="semiLight" size="small">
+                <FormattedMessage id="devSection.section4.subtitle" />
+              </Text>
+            </TextsWrapper>
+            <Wrapper mTop="large">
+              <Services>
+                <Github />
+                <Slack />
+                <Jenkins />
+                <CircleCI />
+              </Services>
+            </Wrapper>
+          </Wrapper>
+        </FourthSection>
       </Wrapper>
     </DarkWrapper>
   )

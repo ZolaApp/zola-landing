@@ -69,6 +69,7 @@ export const SubSections = styled.div`
       padding-top: 0;
 
       ${media.tablet`
+        text-align: left;
         padding-top: ${({ theme }) => theme.sizes.xlarge};
         padding-left: ${({ theme }) => theme.sizes.xlarge};
       `};
@@ -101,20 +102,18 @@ export const TextsWrapper = styled.div`
   }
 `
 
-export const CdnIlluWrapper = styled.div`
+const SectionIlluWrapper = styled.div`
   display: none;
   ${media.large`display: block;`};
   position: absolute;
   z-index: -1;
   top: ${({ theme }) => theme.sizes.large};
+`
+
+export const CdnIlluWrapper = SectionIlluWrapper.extend`
   left: ${({ theme }) => theme.sizes.large};
 `
 
-export const VersioningIlluWrapper = styled.div`
-  display: none;
-  ${media.large`display: block;`};
-  position: absolute;
-  z-index: -1;
-  top: ${({ theme }) => theme.sizes.large};
+export const VersioningIlluWrapper = SectionIlluWrapper.extend`
   right: 120px;
 `

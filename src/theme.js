@@ -1,10 +1,32 @@
+import { css } from 'styled-components'
+
+const sizes = {
+  large: 1280,
+  desktop: 992,
+  tablet: 768,
+  phone: 376
+}
+
+// Iterate through the sizes and create a media template
+export const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (min-width: ${sizes[label] / 16}em) {
+      ${css(...args)};
+    }
+  `
+
+  return acc
+}, {})
+
 export default {
   colors: {
     light: 'rgb(255, 255, 255)',
     dark: 'rgb(25, 25, 25)',
+    dark2: 'rgb(40, 40, 40)',
     semiDark: 'rgba(25, 25, 25, 0.5)',
     lightGray: 'rgba(25, 25, 25, 0.2)',
-    alphaLight: 'rgba(234, 234, 234, 0.2)'
+    alphaLight: 'rgba(234, 234, 234, 0.2)',
+    semiLight: 'rgba(255, 255, 255, 0.5)'
   },
   globals: {
     transition: 'all ease 0.25s',

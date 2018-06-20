@@ -132,10 +132,13 @@ table {
 }
 
 body {
-  white-space: pre-wrap;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   line-height: 1.45em;
   margin: 0;
   padding: 0;
+}
+
+#main {
+  white-space: pre-wrap;
 }

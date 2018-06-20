@@ -1,19 +1,27 @@
 import styled from 'styled-components'
+import { media } from '../../theme'
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   margin-bottom: ${({ theme }) => theme.sizes.huge};
+
+  ${media.large`
+    grid-template-columns: repeat(3, 1fr);
+  `};
 `
 
 export const Column = styled.div`
   position: relative;
   padding: ${({ theme }) => theme.sizes.large};
-  border-left: 1px solid ${({ theme }) => theme.colors.lightGray};
 
-  &:last-child {
-    border-right: 1px solid ${({ theme }) => theme.colors.lightGray};
-  }
+  ${media.large`
+    border-left: 1px solid ${({ theme }) => theme.colors.lightGray};
+
+    &:last-child {
+      border-right: 1px solid ${({ theme }) => theme.colors.lightGray};
+    }
+  `};
 `
 
 export const Header = styled.div`

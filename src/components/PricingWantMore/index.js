@@ -4,13 +4,13 @@ import Container from '../Container'
 import Wrapper from '../Wrapper'
 import Text from '../Text'
 import Button from '../Button'
-import { Base, Content, ButtonWrapper } from './styles'
+import { Base, Content, Texts, ButtonWrapper } from './styles'
 
 const PricingWantMore = () => (
   <Base>
     <Container>
       <Content>
-        <Wrapper>
+        <Texts>
           <Text size="xlarge">
             <FormattedMessage id="pricing.contact.title" />
           </Text>
@@ -20,7 +20,7 @@ const PricingWantMore = () => (
               <FormattedMessage id="pricing.contact.paragraph" />
             </Text>
           </Wrapper>
-        </Wrapper>
+        </Texts>
 
         <ButtonWrapper>
           <Button primary asLink href="tel:+3317525256734">

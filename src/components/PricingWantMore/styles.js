@@ -13,6 +13,13 @@ export const Content = styled.div`
     display: flex;
   `};
 `
+
+export const Texts = styled.div`
+  ${media.large`
+    max-width: 60%;
+  `};
+`
+
 export const ButtonWrapper = styled.div`
   align-self: center;
   margin-left: auto;

@@ -36,7 +36,6 @@ export const Feature = styled.div`
   display: flex;
   align-items: center;
   min-height: 2.9em;
-  flex-wrap: wrap;
   margin-bottom: ${({ theme }) => theme.sizes.large};
 `
 
@@ -47,6 +46,7 @@ const dotColors = {
 }
 
 export const Dot = styled.span`
+  flex-shrink: 0;
   height: 25px;
   width: 25px;
   border-radius: 50%;
@@ -63,7 +63,7 @@ export const FeatureNote = styled.span`
 `
 
 export const OpenSourceLink = styled.a`
-  visiblity: hidden;
+  visibility: hidden;
   position: absolute;
   left: 0;
   right: 0;

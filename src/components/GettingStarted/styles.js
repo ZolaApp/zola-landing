@@ -14,7 +14,7 @@ export const TextsWrapper = styled.div`
     display: block;
 
     &:last-child {
-      margin-top: ${({ theme }) => theme.sizes.tiny};
+      margin-top: ${({ theme }) => theme.sizes.regular};
     }
   }
 `

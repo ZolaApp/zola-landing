@@ -1,15 +1,25 @@
+// @flow
 import React from 'react'
+import { withRouter, Link, type Match } from 'react-router-dom'
 import Text from '../Text'
 import Logo from '../Icons/Logo'
 import { StyledWrapper } from './styles'
 
-const LogoWithText = () => {
+type Props = {
+  match: Match
+}
+
+const LogoWithText = (props: Props) => {
+  const currentLocale = props.match.params.locale
+
   return (
     <StyledWrapper>
-      <Logo />
-      <Text>Zola</Text>
+      <Link to={'/' + currentLocale}>
+        <Logo />
+        <Text>Zola</Text>
+      </Link>
     </StyledWrapper>
   )
 }
 
-export default LogoWithText
+export default withRouter(LogoWithText)

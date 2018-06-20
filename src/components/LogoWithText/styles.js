@@ -12,4 +12,10 @@ export const StyledWrapper = styled.div`
   ${StyledText} {
     font-size: 1.563rem;
   }
+
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
 `

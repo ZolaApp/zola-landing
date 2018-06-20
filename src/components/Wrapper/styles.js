@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const StyledWrapper = styled.div`
   ${({ padding, theme }) => padding && `padding: ${theme.sizes[padding]}`};
@@ -14,7 +14,10 @@ export const StyledWrapper = styled.div`
     mBottom && `padding-bottom: ${theme.sizes[mBottom]}`};
   ${({ mLeft, theme }) => mLeft && `padding-left: ${theme.sizes[mLeft]}`};
   display: ${({ flex }) => (flex ? 'flex' : 'block')};
-  flex-direction: ${({ flexDirection }) =>
-    flexDirection || 'row'};
+  ${({ flex, flexDirection }) =>
+    flex &&
+    css`
+      flex-direction: ${flexDirection || 'row'};
+    `};
   ${({ contentCentered }) => contentCentered && `justify-content: center;`};
 `

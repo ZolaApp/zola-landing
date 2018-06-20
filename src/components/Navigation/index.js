@@ -15,11 +15,15 @@ const Navigation = (props: Props) => {
   return (
     <NavWrapper>
       <Links>
-        <NavLink to={'/' + currentLocale} activeClassName="active">
+        <NavLink exact to={'/' + currentLocale} activeClassName="active">
           <FormattedMessage id="header.navigation.product" />
         </NavLink>
 
-        <NavLink to={`/${currentLocale}/pricing`} activeClassName="active">
+        <NavLink
+          exact
+          to={`/${currentLocale}/pricing`}
+          activeClassName="active"
+        >
           <FormattedMessage id="header.navigation.pricing" />
         </NavLink>
 

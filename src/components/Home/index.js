@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, { Fragment } from 'react'
 import { withRouter, type Match, type History } from 'react-router-dom'
 import { injectIntl } from 'react-intl'
 import { LanguageContext } from '../../state'
@@ -28,7 +28,7 @@ class Home extends React.Component<Props> {
     // If the user tries to access the homepage with a locale that isn’t
     // supported, redirect to the index page so that they see the page in the
     // default language.
-    if (this.shouldRedirectToIndex()) {
+    if (this.shouldRedirect()) {
       return history.replace('/' + DEFAULT_LOCALE)
     }
 
@@ -45,7 +45,7 @@ class Home extends React.Component<Props> {
     this.props.switchLanguage(this.props.match.params.locale)
   }
 
-  shouldRedirectToIndex() {
+  shouldRedirect() {
     const routerLocale = this.props.match.params.locale
 
     return (
@@ -55,13 +55,13 @@ class Home extends React.Component<Props> {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <Header />
         <Hero />
         <GettingStarted />
         <BusinessValues />
         <DeveloperSection />
-      </div>
+      </Fragment>
     )
   }
 }

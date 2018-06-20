@@ -6,10 +6,11 @@ import { ActionsWrapper } from './styles'
 const NavigationActions = () => {
   return (
     <ActionsWrapper>
-      <Button secondary>
+      <Button asLink secondary href="https://app.zola.ink/login">
         <FormattedMessage id="header.action.signin" />
       </Button>
-      <Button primary>
+
+      <Button asLink primary href="https://app.zola.ink/register">
         <FormattedMessage id="header.action.trial" />
       </Button>
     </ActionsWrapper>

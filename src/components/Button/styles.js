@@ -26,3 +26,11 @@ export const StyledButton = styled.button`
     border-color: ${theme.colors.dark};
   `};
 `
+
+export const StyledButtonLink = StyledButton.withComponent('a').extend`
+  text-decoration: none;
+
+  &:first-child {
+    margin-right: 1rem;
+  }
+`

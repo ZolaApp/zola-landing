@@ -14,5 +14,7 @@ export const StyledWrapper = styled.div`
     mBottom && `padding-bottom: ${theme.sizes[mBottom]}`};
   ${({ mLeft, theme }) => mLeft && `padding-left: ${theme.sizes[mLeft]}`};
   display: ${({ flex }) => (flex ? 'flex' : 'block')};
+  flex-direction: ${({ flexDirection }) =>
+    flexDirection || 'row'};
   ${({ contentCentered }) => contentCentered && `justify-content: center;`};
 `

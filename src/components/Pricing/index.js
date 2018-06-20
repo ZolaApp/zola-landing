@@ -6,6 +6,7 @@ import { DEFAULT_LOCALE } from '../../constants/translations'
 import isEnabledLocale from '../../helpers/isEnabledLocale'
 import Header from '../Header'
 import PricingHero from '../PricingHero'
+import PricingGrid from '../PricingGrid'
 
 type Props = {
   switchLanguage: any,
@@ -53,6 +54,7 @@ class Pricing extends React.Component<Props> {
       <Fragment>
         <Header />
         <PricingHero />
+        <PricingGrid />
       </Fragment>
     )
   }

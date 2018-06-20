@@ -5,7 +5,7 @@ import Text from '../Text'
 import { CenterWrapper, Catchline } from './styles'
 
 const Pricing = () => (
-  <Wrapper pTop="huge" pBottom="huge">
+  <Wrapper pTop="huge" pBottom="medium">
     <CenterWrapper>
       <Wrapper mBottom="huge">
         <Catchline>

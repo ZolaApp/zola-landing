@@ -1,11 +1,11 @@
 // @flow
 import React, { Fragment } from 'react'
 import { withRouter, type Match, type History } from 'react-router-dom'
-import { injectIntl } from 'react-intl'
 import { LanguageContext } from '../../state'
 import { DEFAULT_LOCALE } from '../../constants/translations'
 import isEnabledLocale from '../../helpers/isEnabledLocale'
 import Header from '../Header'
+import PricingHero from '../PricingHero'
 
 type Props = {
   switchLanguage: any,
@@ -52,6 +52,7 @@ class Pricing extends React.Component<Props> {
     return (
       <Fragment>
         <Header />
+        <PricingHero />
       </Fragment>
     )
   }

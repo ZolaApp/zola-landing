@@ -14,9 +14,13 @@ const Navigation = () => {
         <Link to="/pricing">
           <FormattedMessage id="header.navigation.pricing" />
         </Link>
-        <Link to="/doc">
+        <a
+          href="https://github.com/ZolaApp"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <FormattedMessage id="header.navigation.documentation" />
-        </Link>
+        </a>
       </Links>
       <NavigationActions />
     </NavWrapper>

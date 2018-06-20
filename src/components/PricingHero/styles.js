@@ -13,7 +13,7 @@ export const Catchline = styled.div`
     text-align: center;
 
     &:last-child {
-      margin-top: ${({ theme }) => theme.sizes.tiny};
+      margin-top: ${({ theme }) => theme.sizes.regular};
     }
   }
 `

@@ -63,11 +63,16 @@ export const FeatureNote = styled.span`
 `
 
 export const OpenSourceLink = styled.a`
+  visiblity: hidden;
   position: absolute;
   left: 0;
   right: 0;
   bottom: -${({ theme }) => theme.sizes.regular}
   text-align: center;
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.dark}
+  color: ${({ theme }) => theme.colors.dark};
+
+  ${media.large`
+    visibility: visible;
+  `};
 `

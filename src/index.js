@@ -17,7 +17,6 @@ const init = async () => {
     browserLocale && isEnabledLocale(enabledLocales, browserLocale)
       ? browserLocale
       : DEFAULT_LOCALE
-  console.log('defaultLocale', defaultLocale)
   const translations = await fetchTranslations(defaultLocale)
 
   ReactDOM.render(

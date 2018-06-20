@@ -16,5 +16,12 @@ export const Links = styled.div`
     color: ${({ theme }) => theme.colors.dark};
     text-decoration: none;
     margin-right: ${({ theme }) => theme.sizes.large};
+    padding-bottom: 0.35em;
+  }
+
+  a.active,
+  a:hover,
+  a:focus {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.dark};
   }
 `

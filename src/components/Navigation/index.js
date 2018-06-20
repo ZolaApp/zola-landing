@@ -1,19 +1,28 @@
+// @flow
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { withRouter, NavLink, type Match } from 'react-router-dom'
 import { FormattedMessage } from 'react-intl'
 import NavigationActions from '../NavigationActions'
 import { NavWrapper, Links } from './styles'
 
-const Navigation = () => {
+type Props = {
+  match: Match
+}
+
+const Navigation = (props: Props) => {
+  const currentLocale = props.match.params.locale
+
   return (
     <NavWrapper>
       <Links>
-        <Link to="/">
+        <NavLink to={'/' + currentLocale} activeClassName="active">
           <FormattedMessage id="header.navigation.product" />
-        </Link>
-        <Link to="/pricing">
+        </NavLink>
+
+        <NavLink to={`/${currentLocale}/pricing`} activeClassName="active">
           <FormattedMessage id="header.navigation.pricing" />
-        </Link>
+        </NavLink>
+
         <a
           href="https://github.com/ZolaApp"
           target="_blank"
@@ -27,4 +36,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation
+export default withRouter(Navigation)

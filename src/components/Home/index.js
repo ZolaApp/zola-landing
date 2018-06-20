@@ -1,8 +1,9 @@
 // @flow
 import React from 'react'
-import { withRouter, type Match, History } from 'react-router-dom'
+import { withRouter, type Match, type History } from 'react-router-dom'
 import { injectIntl } from 'react-intl'
 import { LanguageContext } from '../../state'
+import { DEFAULT_LOCALE } from '../../constants/translations'
 import isEnabledLocale from '../../helpers/isEnabledLocale'
 import Header from '../Header'
 import Hero from '../Hero'
@@ -28,7 +29,7 @@ class Home extends React.Component<Props> {
     // supported, redirect to the index page so that they see the page in the
     // default language.
     if (this.shouldRedirectToIndex()) {
-      return history.replace('/')
+      return history.replace('/' + DEFAULT_LOCALE)
     }
 
     // Redirect the user to the correct page in case their browser’s locale
@@ -45,8 +46,6 @@ class Home extends React.Component<Props> {
   }
 
   shouldRedirectToIndex() {
-    console.log('match.params.locale', this.props.match.params.locale)
-    console.log('enabledLocales', this.props.enabledLocales)
     const routerLocale = this.props.match.params.locale
 
     return (

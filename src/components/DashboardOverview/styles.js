@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { media } from '../../theme'
 import { StyledText } from '../Text/styles'
 
 export const SectionWrapper = styled.div`
@@ -19,11 +20,20 @@ export const TextsWrapper = styled.div`
 `
 
 export const ScreenshotWrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+  min-height: 228px;
   display: flex;
   justify-content: center;
   margin-top: ${({ theme }) => theme.sizes.xlarge};
 
   img {
+    position: absolute;
+    top: 0;
+    left: 0px;
     max-width: 100%;
+    ${media.desktop`
+      position: static;
+    `};
   }
 `

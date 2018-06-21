@@ -14,7 +14,7 @@ import {
 
 const MoreWithZola = () => {
   return (
-    <Wrapper pTop="xlarge">
+    <Wrapper pTop="xlarge" pBottom="xlarge">
       <TitlesWrapper>
         <Text semiBold size="large">
           <FormattedMessage id="moreSection.title" />

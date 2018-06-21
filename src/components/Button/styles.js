@@ -18,12 +18,12 @@ export const StyledButton = styled.button`
     color: ${light ? theme.colors.dark : theme.colors.light};
   `};
 
-  ${({ secondary, theme }) =>
+  ${({ secondary, light, theme }) =>
     secondary &&
     `
-    background: ${theme.colors.light};
-    color: ${theme.colors.dark};
-    border-color: ${theme.colors.dark};
+    background: ${light ? theme.colors.dark : theme.colors.light};
+    color: ${light ? theme.colors.light : theme.colors.dark};
+    border-color: ${light ? theme.colors.light : theme.colors.dark};
   `};
 `
 

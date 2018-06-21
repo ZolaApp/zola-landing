@@ -14,10 +14,6 @@ export const NavWrapper = styled.div`
 export const Links = styled.div`
   margin-bottom: ${({ theme }) => theme.sizes.large};
   ${media.phone`margin-bottom: 0;`};
-  ${media.tablet`
-    margin-right: ${({ theme }) => theme.sizes.large};
-    border-right: solid 1px ${({ theme }) => theme.colors.lightGray};
-  `};
 
   a {
     margin-bottom: ${({ theme }) => theme.sizes.regular};

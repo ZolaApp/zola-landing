@@ -24,5 +24,9 @@ export const LinksWrapper = styled.div`
         content: none;
       }
     }
+
+    &.active {
+      color: ${({ theme }) => theme.colors.dark};
+    }
   }
 `

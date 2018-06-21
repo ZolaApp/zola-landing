@@ -14,6 +14,7 @@ import ManagerSection from '../ManagerSection'
 import DashboardOverview from '../DashboardOverview'
 import MoreWithZola from '../MoreWithZola'
 import InterestedSection from '../InterestedSection'
+import Footer from '../Footer'
 
 type Props = {
   switchLanguage: any,
@@ -69,6 +70,7 @@ class Home extends React.Component<Props> {
         <DashboardOverview />
         <MoreWithZola />
         <InterestedSection />
+        <Footer />
       </Fragment>
     )
   }

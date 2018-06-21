@@ -8,6 +8,9 @@ export const CenterWrapper = styled.div`
 `
 
 export const Catchline = styled.div`
+  padding-left: ${({ theme }) => theme.sizes.large};
+  padding-right: ${({ theme }) => theme.sizes.large};
+
   ${StyledText} {
     display: block;
     text-align: center;

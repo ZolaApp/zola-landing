@@ -21,15 +21,20 @@ export const Links = styled.div`
 
   a {
     margin-bottom: ${({ theme }) => theme.sizes.regular};
-    ${media.tablet`margin-bottom: 0;`};
+    margin-right: ${({ theme }) => theme.sizes.large};
+    padding-bottom: 0.35em;
+    border-bottom: 1px solid transparent;
     font-size: ${({ theme }) => theme.fonts.sizes.medium};
     color: ${({ theme }) => theme.colors.dark};
     text-decoration: none;
-    ${media.phone`
-      margin-right: ${({ theme }) => theme.sizes.large};
+
+    ${media.tablet`
+      margin-bottom: 0;
     `};
-    padding-bottom: 0.35em;
-    border-bottom: 1px solid transparent;
+  }
+
+  a:last-child {
+    margin-right: 0;
   }
 
   a.active,

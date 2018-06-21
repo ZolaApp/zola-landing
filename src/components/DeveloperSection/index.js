@@ -42,7 +42,7 @@ const DeveloperSection = () => {
           </TitleWrapper>
           <Wrapper mTop="xlarge">
             <MainSection>
-              <Wrapper padding="xlarge" pLeft="huge">
+              <Wrapper padding="xlarge">
                 <MainSectionTextsWrapper>
                   <Text color="light" size="large">
                     <FormattedMessage id="devSection.section1.title" />

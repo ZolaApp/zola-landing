@@ -12,11 +12,13 @@ const Footer = () => {
     <Wrapper padding="large">
       <Container>
         <ContentWrapper>
-          <LogoWithText />
           <LanguageSwitcher />
-          <Text>
-            <FormattedMessage id="footer.copyright" />
-          </Text>
+          <LogoWithText />
+          <Wrapper>
+            <Text size="small" color="semiDark">
+              <FormattedMessage id="footer.copyright" />
+            </Text>
+          </Wrapper>
         </ContentWrapper>
       </Container>
     </Wrapper>

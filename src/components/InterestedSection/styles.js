@@ -30,6 +30,7 @@ export const Paragraphs = styled.div`
     padding-right: ${({ theme }) => theme.sizes.regular};
 
     &:first-child {
+      text-align: right;
       border-right: solid 1px rgba(255, 255, 255, 0.2);
     }
   }

@@ -13,22 +13,15 @@ export const NavWrapper = styled.div`
 
 export const Links = styled.div`
   margin-bottom: ${({ theme }) => theme.sizes.large};
-  ${media.phone`
-    margin-bottom: 0;
-    margin-right: ${({ theme }) => theme.sizes.large};
-  `};
+  ${media.phone`margin-bottom: 0;`};
   ${media.tablet`
+    margin-right: ${({ theme }) => theme.sizes.large};
     border-right: solid 1px ${({ theme }) => theme.colors.lightGray};
   `};
 
   a {
-    display: block;
-    text-align: center;
     margin-bottom: ${({ theme }) => theme.sizes.regular};
-    ${media.tablet`
-      display: inline-block;
-      margin-bottom: 0;
-    `};
+    ${media.tablet`margin-bottom: 0;`};
     font-size: ${({ theme }) => theme.fonts.sizes.medium};
     color: ${({ theme }) => theme.colors.dark};
     text-decoration: none;

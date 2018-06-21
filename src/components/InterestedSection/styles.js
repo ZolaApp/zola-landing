@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { media } from '../../theme'
 import { StyledButton } from '../Button/styles'
 
 export const SectionWrapper = styled.div`
@@ -13,25 +14,47 @@ export const TextsWrapper = styled.div`
 
 export const ActionsWrapper = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin-top: ${({ theme }) => theme.sizes.xlarge};
+  ${media.desktop`
+    flex-direction: row;
+  `};
 
   ${StyledButton} {
-    margin-right: ${({ theme }) => theme.sizes.large};
+    margin-bottom: ${({ theme }) => theme.sizes.regular};
+
+    ${media.desktop`
+      margin-right: ${({ theme }) => theme.sizes.large};
+      margin-bottom: 0;
+    `};
   }
 `
 
 export const Paragraphs = styled.div`
   display: flex;
+  flex-direction: column;
   margin-top: ${({ theme }) => theme.sizes.large};
+  ${media.desktop`
+    flex-direction: row;
+  `};
 
   > div {
+    text-align: center;
     padding-left: ${({ theme }) => theme.sizes.regular};
     padding-right: ${({ theme }) => theme.sizes.regular};
+    margin-bottom: ${({ theme }) => theme.sizes.large};
+    ${media.desktop`
+      text-align: left;
+      margin-bottom: 0;
+    `};
 
     &:first-child {
-      text-align: right;
-      border-right: solid 1px rgba(255, 255, 255, 0.2);
+      ${media.desktop`
+        text-align: right;
+        border-right: solid 1px rgba(255, 255, 255, 0.2);
+      `};
     }
   }
 `

@@ -8,21 +8,17 @@ import App from './components/App'
 import './index.css'
 
 const init = async () => {
+  const currentLocale = window.location.pathname.replace('/', '').slice(0, 2)
   const enabledLocales = await fetchEnabledLocales()
-  // Slice the two first characters to retrieve the “short” locale from “long”
-  // locales such as `en_EN`.
-  const browserLocale =
-    !!navigator.languages && navigator.languages[0].slice(0, 2)
-  const defaultLocale =
-    browserLocale && isEnabledLocale(enabledLocales, browserLocale)
-      ? browserLocale
-      : DEFAULT_LOCALE
-  const translations = await fetchTranslations(defaultLocale)
+  const locale = isEnabledLocale(enabledLocales, currentLocale)
+    ? currentLocale
+    : DEFAULT_LOCALE
+  const translations = await fetchTranslations(locale)
 
   ReactDOM.render(
     <App
       enabledLocales={enabledLocales}
-      locale={defaultLocale}
+      locale={locale}
       translations={translations}
     />,
     document.getElementById('root')

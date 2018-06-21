@@ -1,27 +1,47 @@
 import styled from 'styled-components'
+import { media } from '../../theme'
 
 export const NavWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, auto);
+  display: flex;
+  flex-direction: column;
+  ${media.phone`flex-direction: row;`};
   justify-self: end;
   align-items: center;
+  margin-top: ${({ theme }) => theme.sizes.xlarge};
+  ${media.tablet`margin-top: 0;`};
 `
 
 export const Links = styled.div`
-  border-right: solid 1px ${({ theme }) => theme.colors.lightGray};
-  margin-right: ${({ theme }) => theme.sizes.large};
+  margin-bottom: ${({ theme }) => theme.sizes.large};
+  ${media.phone`
+    margin-bottom: 0;
+    margin-right: ${({ theme }) => theme.sizes.large};
+  `};
+  ${media.tablet`
+    border-right: solid 1px ${({ theme }) => theme.colors.lightGray};
+  `};
 
   a {
+    display: block;
+    text-align: center;
+    margin-bottom: ${({ theme }) => theme.sizes.regular};
+    ${media.tablet`
+      display: inline-block;
+      margin-bottom: 0;
+    `};
     font-size: ${({ theme }) => theme.fonts.sizes.medium};
     color: ${({ theme }) => theme.colors.dark};
     text-decoration: none;
-    margin-right: ${({ theme }) => theme.sizes.large};
+    ${media.phone`
+      margin-right: ${({ theme }) => theme.sizes.large};
+    `};
     padding-bottom: 0.35em;
+    border-bottom: 1px solid transparent;
   }
 
   a.active,
   a:hover,
   a:focus {
-    border-bottom: 1px solid ${({ theme }) => theme.colors.dark};
+    border-bottom-color: ${({ theme }) => theme.colors.dark};
   }
 `

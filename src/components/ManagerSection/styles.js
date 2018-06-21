@@ -27,6 +27,10 @@ export const DashboardWrapper = styled.div`
   position: relative;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 660px) {
+    flex-direction: row;
+  }
   justify-content: space-between;
   min-height: 300px;
   ${media.tablet`min-height: 450px;`};
@@ -34,13 +38,20 @@ export const DashboardWrapper = styled.div`
 `
 
 export const DashboardIlluWrapper = styled.div`
-  position: absolute;
-  right: -1002px;
-  ${media.tablet`right: -960px;`};
-  ${media.desktop`right: -500px;`};
+  @media screen and (min-width: 660px) {
+    position: absolute;
+    right: -800px;
+  }
+  ${media.desktop`right: -582px;`};
   ${media.large`right: -300px;`};
   @media screen and (min-width: 1400px) {
     right: -200px;
+  }
+  @media screen and (min-width: 1525px) {
+    right: -66px;
+  }
+  @media screen and (min-width: 1600px) {
+    right: 0px;
   }
   top: 0;
 `
@@ -48,7 +59,10 @@ export const DashboardIlluWrapper = styled.div`
 export const DashboardTitlesWrapper = styled.div`
   margin-top: 6em;
   ${media.desktop`margin-top: 12em`};
-  margin-left: 2em;
+  margin-left: 4em;
+  @media screen and (min-width: 660px) {
+    margin-left: 2em;
+  }
   ${media.tablet`margin-left: 6em;`};
   margin-right: 2em;
 `

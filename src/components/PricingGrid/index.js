@@ -35,7 +35,7 @@ const PricingGrid = () => (
   <Container>
     <Grid>
       {PLANS.map((plan, index) => (
-        <Column>
+        <Column key={plan.name}>
           <Header>
             <Text semiBold size="large">
               <FormattedMessage id={plan.name} />

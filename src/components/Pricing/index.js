@@ -8,6 +8,8 @@ import Header from '../Header'
 import PricingHero from '../PricingHero'
 import PricingGrid from '../PricingGrid'
 import PricingWantMore from '../PricingWantMore'
+import InterestedSection from '../InterestedSection'
+import Footer from '../Footer'
 
 type Props = {
   switchLanguage: any,
@@ -57,6 +59,8 @@ class Pricing extends React.Component<Props> {
         <PricingHero />
         <PricingGrid />
         <PricingWantMore />
+        <InterestedSection />
+        <Footer />
       </Fragment>
     )
   }

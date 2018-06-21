@@ -5,21 +5,21 @@ import Container from '../Container'
 import Text from '../Text'
 import LanguageSwitcher from '../LanguageSwitcher'
 import LogoWithText from '../LogoWithText'
-import { ContentWrapper } from './styles'
+import { GlobalWrapper, ContentWrapper } from './styles'
 
 const Footer = () => {
   return (
     <Wrapper padding="large">
       <Container>
-        <ContentWrapper>
-          <LanguageSwitcher />
-          <LogoWithText />
-          <Wrapper>
+        <GlobalWrapper>
+          <ContentWrapper>
+            <LogoWithText />
             <Text size="small" color="semiDark">
               <FormattedMessage id="footer.copyright" />
             </Text>
-          </Wrapper>
-        </ContentWrapper>
+          </ContentWrapper>
+          <LanguageSwitcher />
+        </GlobalWrapper>
       </Container>
     </Wrapper>
   )

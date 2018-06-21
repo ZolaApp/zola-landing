@@ -1,9 +1,15 @@
 import styled from 'styled-components'
+import { media } from '../../theme'
 
 export const LinksWrapper = styled.div`
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: ${({ theme }) => theme.sizes.large};
+  ${media.tablet`
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+  `};
 
   a {
     text-decoration: none;

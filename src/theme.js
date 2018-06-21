@@ -21,6 +21,7 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
 export default {
   colors: {
     light: 'rgb(255, 255, 255)',
+    gray: 'rgba(234, 234, 234, 0.2)',
     dark: 'rgb(25, 25, 25)',
     dark2: 'rgb(40, 40, 40)',
     semiDark: 'rgba(25, 25, 25, 0.5)',

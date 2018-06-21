@@ -11,6 +11,7 @@ import GettingStarted from '../GettingStarted'
 import BusinessValues from '../BusinessValues'
 import DeveloperSection from '../DeveloperSection'
 import ManagerSection from '../ManagerSection'
+import DashboardOverview from '../DashboardOverview'
 
 type Props = {
   switchLanguage: any,
@@ -63,6 +64,7 @@ class Home extends React.Component<Props> {
         <BusinessValues />
         <DeveloperSection />
         <ManagerSection />
+        <DashboardOverview />
       </Fragment>
     )
   }

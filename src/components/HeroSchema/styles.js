@@ -35,6 +35,16 @@ export const FigureArrow = styled.div`
 
 export const FigureIllu = styled.div`
   margin-bottom: ${({ theme }) => theme.sizes.tiny};
+  overflow: hidden;
+  max-width: 100vw;
+
+  svg {
+    transform: scale(0.7);
+    transform-origin: center center;
+    @media screen and (min-width: 370px) {
+      transform: scale(1);
+    }
+  }
 `
 
 export const FigureDetails = styled.div`

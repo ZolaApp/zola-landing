@@ -33,10 +33,10 @@ const InterestedSection = () => {
             </Paragraphs>
           </TextsWrapper>
           <ActionsWrapper>
-            <Button primary light>
+            <Button primary light asLink href="https://app.zola.ink/register">
               <FormattedMessage id="interestedSection.tryButton" />
             </Button>
-            <Button secondary light>
+            <Button secondary light asLink href="mailto:contact@zola.ink">
               <FormattedMessage id="interestedSection.demoButton" />
             </Button>
           </ActionsWrapper>

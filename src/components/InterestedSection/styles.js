@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { media } from '../../theme'
-import { StyledButton } from '../Button/styles'
+import { StyledButtonLink } from '../Button/styles'
 
 export const SectionWrapper = styled.div`
   background: ${({ theme }) => theme.colors.dark};
@@ -17,13 +17,15 @@ export const ActionsWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: ${({ theme }) => theme.sizes.xlarge};
+  margin-top: ${({ theme }) => theme.sizes.large};
   ${media.desktop`
     flex-direction: row;
+    margin-top: ${({ theme }) => theme.sizes.xlarge};
   `};
 
-  ${StyledButton} {
+  ${StyledButtonLink} {
     margin-bottom: ${({ theme }) => theme.sizes.regular};
+    margin-right: 0;
 
     ${media.desktop`
       margin-right: ${({ theme }) => theme.sizes.large};

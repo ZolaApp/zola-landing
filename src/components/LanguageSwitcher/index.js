@@ -1,22 +1,35 @@
+// @flow
 import React from 'react'
-import { withRouter, Link } from 'react-router-dom'
+import { withRouter, Link, type Match } from 'react-router-dom'
 import { LinksWrapper } from './styles'
 
-class LanguageSwitcher extends React.Component {
-  isLocaleActive = locale => this.props.match.params.locale === locale
+type Props = {
+  match: Match
+}
 
-  render() {
-    return (
-      <LinksWrapper>
-        <Link to="/fr" className={this.isLocaleActive('fr') ? 'active' : null}>
-          FR
-        </Link>
-        <Link to="/en" className={this.isLocaleActive('en') ? 'active' : null}>
-          EN
-        </Link>
-      </LinksWrapper>
-    )
-  }
+const getLanguageSwitcherLink = (props: Props, locale: string): string =>
+  props.match.path.replace(':locale', locale)
+
+const LanguageSwitcher = (props: Props) => {
+  const activeLocale = props.match.params.locale
+
+  return (
+    <LinksWrapper>
+      <Link
+        to={getLanguageSwitcherLink(props, 'fr')}
+        className={activeLocale === 'fr' ? 'active' : null}
+      >
+        FR
+      </Link>
+
+      <Link
+        to={getLanguageSwitcherLink(props, 'en')}
+        className={activeLocale === 'en' ? 'active' : null}
+      >
+        EN
+      </Link>
+    </LinksWrapper>
+  )
 }
 
 export default withRouter(LanguageSwitcher)

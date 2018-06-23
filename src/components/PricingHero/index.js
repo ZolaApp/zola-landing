@@ -9,13 +9,17 @@ const Pricing = () => (
     <CenterWrapper>
       <Wrapper mBottom="huge">
         <Catchline>
-          <Text size="xlarge">
-            <FormattedMessage id="pricing.hero.title" />
-          </Text>
+          <h1>
+            <Text size="xlarge">
+              <FormattedMessage id="pricing.hero.title" />
+            </Text>
+          </h1>
 
-          <Text color="semiDark" size="medium">
-            <FormattedMessage id="pricing.hero.subtitle" />
-          </Text>
+          <h2>
+            <Text color="semiDark" size="medium">
+              <FormattedMessage id="pricing.hero.subtitle" />
+            </Text>
+          </h2>
         </Catchline>
       </Wrapper>
     </CenterWrapper>

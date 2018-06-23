@@ -7,7 +7,7 @@ export const Base = styled.div`
 `
 
 export const Content = styled.div`
-  padding: ${({ theme }) => theme.sizes.xlarge};
+  padding: ${({ theme }) => theme.sizes.large};
 
   ${media.large`
     display: flex;

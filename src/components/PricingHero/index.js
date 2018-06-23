@@ -5,17 +5,21 @@ import Text from '../Text'
 import { CenterWrapper, Catchline } from './styles'
 
 const Pricing = () => (
-  <Wrapper pTop="huge" pBottom="medium" pLeft="xlarge" pRight="xlarge">
+  <Wrapper pTop="huge" pBottom="medium" pLeft="large" pRight="large">
     <CenterWrapper>
       <Wrapper mBottom="huge">
         <Catchline>
-          <Text size="xlarge">
-            <FormattedMessage id="pricing.hero.title" />
-          </Text>
+          <h1>
+            <Text size="xlarge">
+              <FormattedMessage id="pricing.hero.title" />
+            </Text>
+          </h1>
 
-          <Text color="semiDark" size="medium">
-            <FormattedMessage id="pricing.hero.subtitle" />
-          </Text>
+          <h2>
+            <Text color="semiDark" size="medium">
+              <FormattedMessage id="pricing.hero.subtitle" />
+            </Text>
+          </h2>
         </Catchline>
       </Wrapper>
     </CenterWrapper>

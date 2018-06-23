@@ -8,7 +8,7 @@ import { SectionWrapper, TextsWrapper, ScreenshotWrapper } from './styles'
 const DashboardOverview = () => {
   return (
     <SectionWrapper>
-      <Wrapper pTop="xlarge">
+      <Wrapper pTop="xlarge" pLeft="large" pRight="large">
         <Wrapper flex contentCentered flexDirection="column">
           <TextsWrapper>
             <Text semiBold size="large">

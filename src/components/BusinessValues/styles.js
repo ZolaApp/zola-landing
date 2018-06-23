@@ -12,7 +12,7 @@ export const Block = styled.div`
   flex: 1;
 `
 
-export const BlockTitle = styled.div`
+export const BlockTitle = styled.h3`
   display: flex;
   align-items: center;
   margin-bottom: ${({ theme }) => theme.sizes.regular};

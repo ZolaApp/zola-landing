@@ -7,7 +7,7 @@ export const DarkWrapper = styled.div`
   background: ${({ theme }) => theme.colors.dark};
 `
 
-export const TitleWrapper = styled.div`
+export const TitleWrapper = styled.h3`
   text-align: center;
 
   ${StyledText} {

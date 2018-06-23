@@ -11,12 +11,17 @@ const Hero = () => {
       <CenterWrapper>
         <Wrapper mBottom="huge">
           <Catchline>
-            <Text size="xlarge">
-              <FormattedMessage id="hero.title" />
-            </Text>
-            <Text color="semiDark" size="medium">
-              <FormattedMessage id="hero.subtitle" />
-            </Text>
+            <h1>
+              <Text size="xlarge">
+                <FormattedMessage id="hero.title" />
+              </Text>
+            </h1>
+
+            <h2>
+              <Text color="semiDark" size="medium" as="h2">
+                <FormattedMessage id="hero.subtitle" />
+              </Text>
+            </h2>
           </Catchline>
         </Wrapper>
         <HeroSchema />

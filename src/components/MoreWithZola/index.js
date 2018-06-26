@@ -40,10 +40,10 @@ const MoreWithZola = () => {
         <Block>
           <BlockTextsWrapper>
             <Text semiBold size="large">
-              <FormattedMessage id="moreSection.section1.title" />
+              <FormattedMessage id="moreSection.section2.title" />
             </Text>
             <Text size="small" color="semiDark">
-              <FormattedMessage id="moreSection.section1.subtitle" />
+              <FormattedMessage id="moreSection.section2.subtitle" />
             </Text>
           </BlockTextsWrapper>
           <BlockIcon>
